@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwbqmwa3jvi7"]
+
+[ext_resource type="Script" path="res://src/planet_system/planet_system.gd" id="1_uctyv"]
+[ext_resource type="PackedScene" uid="uid://swu71guya5g8" path="res://src/common/ResourcesView.tscn" id="2_igbyp"]
+
+[node name="PlanetSystem" type="Node2D"]
+script = ExtResource("1_uctyv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LabelName" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ResourcesView" parent="VBoxContainer" instance=ExtResource("2_igbyp")]
+layout_mode = 2

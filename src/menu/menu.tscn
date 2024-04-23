@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqscr5id4en4"]
+
+[ext_resource type="Script" path="res://src/menu/menu.gd" id="1_1khtf"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1khtf")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -452.07
+offset_top = -120.86
+offset_right = -1564.07
+offset_bottom = -728.86
+grow_horizontal = 2
+grow_vertical = 2
