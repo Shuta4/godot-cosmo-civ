@@ -25,6 +25,7 @@ text = "G:"
 
 [node name="LabelGoldValue" type="Label" parent="VBoxContainer/RowGold"]
 layout_mode = 2
+text = "0"
 
 [node name="RowMetal" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -35,6 +36,7 @@ text = "M:"
 
 [node name="LabelMetalValue" type="Label" parent="VBoxContainer/RowMetal"]
 layout_mode = 2
+text = "0"
 
 [node name="RowPopulation" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -45,6 +47,7 @@ text = "P:"
 
 [node name="LabelPopulationValue" type="Label" parent="VBoxContainer/RowPopulation"]
 layout_mode = 2
+text = "0"
 
 [node name="RowFuel" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -55,3 +58,4 @@ text = "F:"
 
 [node name="LabelFuelValue" type="Label" parent="VBoxContainer/RowFuel"]
 layout_mode = 2
+text = "0"

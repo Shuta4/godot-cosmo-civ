@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0ckgy7tvirsc"]
+
+[ext_resource type="Script" path="res://src/common/Inventory.gd" id="1_kv82i"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kv82i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 152.0
+grow_horizontal = 0
+theme_override_constants/separation = 20
+
+[node name="RowGold" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Type1" type="Label" parent="VBoxContainer/RowGold"]
+layout_mode = 2
+text = "Gold:"
+
+[node name="Type1Value" type="Label" parent="VBoxContainer/RowGold"]
+layout_mode = 2
+text = "0"
+
+[node name="RowMetal" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Type2" type="Label" parent="VBoxContainer/RowMetal"]
+layout_mode = 2
+text = "Metal:"
+
+[node name="Type2Value" type="Label" parent="VBoxContainer/RowMetal"]
+layout_mode = 2
+text = "0"
+
+[node name="RowPopulation" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Type3" type="Label" parent="VBoxContainer/RowPopulation"]
+layout_mode = 2
+text = "Population:"
+
+[node name="Type3Value" type="Label" parent="VBoxContainer/RowPopulation"]
+layout_mode = 2
+text = "0"
+
+[node name="RowFuel" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Type4" type="Label" parent="VBoxContainer/RowFuel"]
+layout_mode = 2
+text = "Fuel:"
+
+[node name="Type4Value" type="Label" parent="VBoxContainer/RowFuel"]
+layout_mode = 2
+text = "0"

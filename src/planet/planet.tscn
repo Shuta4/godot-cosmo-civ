@@ -1,6 +1,68 @@
-[gd_scene load_steps=2 format=3 uid="uid://du4sul03kmyki"]
+[gd_scene load_steps=5 format=3 uid="uid://du4sul03kmyki"]
 
 [ext_resource type="Script" path="res://src/planet/planet.gd" id="1_f3lt6"]
+[ext_resource type="Texture2D" uid="uid://bl3n5qowv3iw3" path="res://assets/planet_types/Alpine_01-256x256.png" id="2_7dnjd"]
+[ext_resource type="PackedScene" uid="uid://swu71guya5g8" path="res://src/common/ResourcesView.tscn" id="3_ufvib"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ulva2"]
+radius = 129.757
 
 [node name="Planet" type="Node2D"]
+position = Vector2(-124, -133)
 script = ExtResource("1_f3lt6")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(123, 133)
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("2_7dnjd")
+
+[node name="Area2D" type="Area2D" parent="Sprite"]
+position = Vector2(-123, -133)
+
+[node name="PlanetCollision" type="CollisionShape2D" parent="Sprite/Area2D"]
+show_behind_parent = true
+position = Vector2(125, 133)
+shape = SubResource("CircleShape2D_ulva2")
+
+[node name="ResourcesView" parent="." instance=ExtResource("3_ufvib")]
+visible = false
+offset_left = 34.0
+offset_top = 76.0
+offset_right = 71.0
+offset_bottom = 184.0
+rotation = 0.00195358
+scale = Vector2(1.00125, 1)
+
+[node name="Double_recources" type="Button" parent="."]
+visible = false
+offset_left = 172.0
+offset_top = 78.0
+offset_right = 225.0
+offset_bottom = 106.0
+theme_override_font_sizes/font_size = 14
+text = "*2 "
+
+[node name="Colonize" type="Button" parent="."]
+visible = false
+offset_left = 173.0
+offset_top = 157.0
+offset_right = 226.0
+offset_bottom = 185.0
+theme_override_font_sizes/font_size = 14
+text = "Colonize"
+
+[node name="Something" type="Button" parent="."]
+visible = false
+offset_left = 174.0
+offset_top = 118.0
+offset_right = 227.0
+offset_bottom = 146.0
+theme_override_font_sizes/font_size = 14
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 87.0
+offset_top = 54.0
+offset_right = 160.0
+offset_bottom = 81.0
+
+[connection signal="mouse_entered" from="Sprite/Area2D" to="." method="_on_area_2d_mouse_entered"]
